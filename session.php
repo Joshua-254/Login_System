@@ -7,10 +7,9 @@
 
    $selection_user_query = "SELECT * FROM users WHERE username = '$user_check'";
    $ses_sql = mysqli_query($conn,$selection_user_query);
-   
+
    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-   
-   $login_session = $row['username'];
+   $login_session = $row['username'];   
    
    if(!isset($_SESSION['login_user'])){
       header("location:index.php");
